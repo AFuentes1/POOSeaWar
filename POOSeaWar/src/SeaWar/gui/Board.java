@@ -11,7 +11,7 @@ package SeaWar.gui;
 public class Board extends javax.swing.JFrame {
 
     /**
-     * Creates new form java
+     * Creates new form Board
      */
     public Board() {
         initComponents();
@@ -59,19 +59,18 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Board.util.logging.Logger.getLogger(Board.class.getName()).log(Board.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Board.util.logging.Logger.getLogger(Board.class.getName()).log(Board.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Board.util.logging.Logger.getLogger(Board.class.getName()).log(Board.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Board.util.logging.Logger.getLogger(Board.class.getName()).log(Board.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        Board.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Board().setVisible(true);
             }
