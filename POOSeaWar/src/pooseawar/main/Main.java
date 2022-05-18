@@ -1,7 +1,7 @@
 
-package pooseawar;
+package pooseawar.main;
 
-public class POOSeaWar {
+public class Main {
 
     public static void main(String[] args) {
         
