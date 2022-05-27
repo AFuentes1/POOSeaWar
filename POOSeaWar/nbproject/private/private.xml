@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/SeaWar/gui/Board.java</file>
-            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/pooseawar/POOSeaWar.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/SeaWarCliente/gui/Cliente.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/SeaWarCliente/gui/BoardCliente.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Servidor/Server.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Comandos/BaseComandos.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/SeaWarCliente/gui/ThreadCliente.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Servidor/BoardServidor.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Servidor/ThreadServer.java</file>
         </group>
     </open-files>
 </project-private>
