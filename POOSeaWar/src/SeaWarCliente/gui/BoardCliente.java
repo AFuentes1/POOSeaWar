@@ -4,6 +4,7 @@
  */
 package SeaWarCliente.gui;
 
+
 import Comandos.BaseComandos;
 import java.awt.Color;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import javax.swing.JLabel;
 public class BoardCliente extends javax.swing.JFrame {
     private Cliente cliente;
     
-    private Rey miPersonaje;
+    private Clases.Rey miPersonaje;
     /**
      * Creates new form BoardCliente
      */
@@ -24,6 +25,7 @@ public class BoardCliente extends javax.swing.JFrame {
         
         initComponents();
         cliente = new Cliente(this);
+        
     }
 
     public void showClientMessage(String msg){
@@ -3400,20 +3402,23 @@ public class BoardCliente extends javax.swing.JFrame {
 
     private void Conectar_borrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conectar_borrActionPerformed
         this.cliente.conectado();
+        miPersonaje = new Clases.Rey("nofomas");
     }//GEN-LAST:event_Conectar_borrActionPerformed
       
     private void crearLables()
     {
+        
         for(int i=0;i<20;i++)
         {   JLabel label = new JLabel("Label"+i);
             label.setText("");
-            label.setBackground(elegirColor());
-            
+           // label.setBackground(elegirColor());
+            Clases.Casilla c = new Clases.Casilla();
+            miPersonaje.asignarCasilla(c, i, i);
         }
         
             
     }
-    
+    /*
     private Casilla buscarCasilla()
     {
         
@@ -3431,6 +3436,8 @@ public class BoardCliente extends javax.swing.JFrame {
     {
         return Color.red;
     }
+    
+    */
     /**
      * @param args the command line arguments
      */

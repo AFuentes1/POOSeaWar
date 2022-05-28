@@ -9,22 +9,33 @@ import java.util.ArrayList;
  */
 public class Rey {
     private String rey; 
-    ArrayList<Personaje> personajes = new ArrayList<Personaje>();
-    Casilla matrizCasilla[][] = new Casilla[30][20]; 
+    ArrayList<Personaje> personajes;
+    Casilla matrizCasilla[][] ; 
     
+
     
-    private Personaje getPersonaje(string nombre)
+    public Rey(String nombre)
     {
-        foreach(Personaje per : personajes)
-        {
-            if(per.getNombre().Equals(nombre))
-                return per;
-        }
+        this.rey = nombre;
+        personajes = new ArrayList<Personaje>();
+        matrizCasilla = new Casilla[30][20]; 
     }
     
-    private void actualizarVidaCasilla(int indice)
+    
+    
+    
+    public void actualizarVidaCasilla(int indice, int danio, int x, int y)
     {
-        personajes[indice].
+        int sanidad = personajes.get(indice).getSanidad();
+        danio -=sanidad;
+        matrizCasilla[x][y].restarVida(danio);
+        
+        
+    }
+    
+    public void asignarCasilla(Casilla casilla, int x, int y)
+    {
+        matrizCasilla[x][y] = casilla;
     }
     
 }
