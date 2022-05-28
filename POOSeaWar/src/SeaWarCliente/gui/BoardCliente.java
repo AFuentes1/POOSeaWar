@@ -6,7 +6,7 @@ package SeaWarCliente.gui;
 
 
 import Comandos.BaseComandos;
-import java.awt.Color;
+import java.awt.Dimension;
 import java.io.IOException;
 import javax.swing.JLabel;
 
@@ -25,7 +25,9 @@ public class BoardCliente extends javax.swing.JFrame {
         
         initComponents();
         cliente = new Cliente(this);
-        
+        Dimension dim = this.getToolkit().getScreenSize();
+        dim.setSize(dim.width, dim.height + 40);
+        this.setSize(dim);
     }
 
     public void showClientMessage(String msg){
@@ -296,7 +298,6 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel189 = new javax.swing.JLabel();
         jLabel190 = new javax.swing.JLabel();
         jLabel191 = new javax.swing.JLabel();
-        jLabel192 = new javax.swing.JLabel();
         jLabel193 = new javax.swing.JLabel();
         jLabel194 = new javax.swing.JLabel();
         jLabel195 = new javax.swing.JLabel();
@@ -327,6 +328,7 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel220 = new javax.swing.JLabel();
         jLabel221 = new javax.swing.JLabel();
         jLabel222 = new javax.swing.JLabel();
+        jLabel192 = new javax.swing.JLabel();
         jLabel223 = new javax.swing.JLabel();
         jLabel224 = new javax.swing.JLabel();
         jLabel225 = new javax.swing.JLabel();
@@ -388,7 +390,6 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel281 = new javax.swing.JLabel();
         jLabel282 = new javax.swing.JLabel();
         jLabel283 = new javax.swing.JLabel();
-        jLabel284 = new javax.swing.JLabel();
         jLabel285 = new javax.swing.JLabel();
         jLabel286 = new javax.swing.JLabel();
         jLabel287 = new javax.swing.JLabel();
@@ -421,6 +422,7 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel313 = new javax.swing.JLabel();
         jLabel314 = new javax.swing.JLabel();
         jLabel315 = new javax.swing.JLabel();
+        jLabel284 = new javax.swing.JLabel();
         jLabel316 = new javax.swing.JLabel();
         jLabel317 = new javax.swing.JLabel();
         jLabel318 = new javax.swing.JLabel();
@@ -709,8 +711,8 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Columnas.setLayout(new java.awt.GridLayout(1, 30));
@@ -1724,10 +1726,6 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel191.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuadriculaDeJuego.add(jLabel191);
 
-        jLabel192.setText("x");
-        jLabel192.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        CuadriculaDeJuego.add(jLabel192);
-
         jLabel193.setText("x");
         jLabel193.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuadriculaDeJuego.add(jLabel193);
@@ -1847,6 +1845,10 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel222.setText("x");
         jLabel222.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuadriculaDeJuego.add(jLabel222);
+
+        jLabel192.setText("x");
+        jLabel192.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CuadriculaDeJuego.add(jLabel192);
 
         jLabel223.setText("x");
         jLabel223.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -2092,10 +2094,6 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel283.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuadriculaDeJuego.add(jLabel283);
 
-        jLabel284.setText("x");
-        jLabel284.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        CuadriculaDeJuego.add(jLabel284);
-
         jLabel285.setText("x");
         jLabel285.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuadriculaDeJuego.add(jLabel285);
@@ -2223,6 +2221,10 @@ public class BoardCliente extends javax.swing.JFrame {
         jLabel315.setText("x");
         jLabel315.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuadriculaDeJuego.add(jLabel315);
+
+        jLabel284.setText("x");
+        jLabel284.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CuadriculaDeJuego.add(jLabel284);
 
         jLabel316.setText("x");
         jLabel316.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -3367,14 +3369,13 @@ public class BoardCliente extends javax.swing.JFrame {
         jPanel1.add(CuadriculaDeJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 790, 700));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ANTONY\\Desktop\\POOSeaWar\\POOSeaWar\\recursos\\Fondo.jpg")); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1090));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
