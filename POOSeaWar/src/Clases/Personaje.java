@@ -31,7 +31,15 @@ public class Personaje {
         this.Ataques = Ataques;
     }
     
+    public int getSanidad()
+    {
+        return this.sanidad;
+    }
     
+    public int getResistencia()
+    {
+        return this.resistencia;
+    }
     
     
     
