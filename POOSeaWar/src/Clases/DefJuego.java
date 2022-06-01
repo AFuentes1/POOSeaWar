@@ -42,7 +42,7 @@ public class DefJuego {
         Ataque a31 = new Ataque("Fish telepathy","FTP",100,300,0,0,33);
         Ataque a32 = new Ataque("Shark Attack","FTP",4,4,1,10,100); //4esquinas
         Ataque a33 = new Ataque("Pulp","FTP",20,50,8,8,25); //tentaculos random
-        p3.addAtaque(a32);
+        p3.addAtaque(a31);
         p3.addAtaque(a32);
         p3.addAtaque(a33);
         //Under sea volcanoes

@@ -48,4 +48,10 @@ public class Rey {
     {
         
     }
+    
+    public void seleccionarCasillas()
+    {
+        
+        int x=0,y=0;
+    }
 }

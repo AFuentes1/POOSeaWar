@@ -16,14 +16,13 @@ public class ComandoAtaque extends BaseComandos {
         super(nombreComando,args,false);
     }
     @Override
-    public  String executeOnServer()
+    public  void executeOnServer()
     {
         
     }
     @Override
-    public  String executeOnClient()
-    {
-        
+    public  void executeOnClient()
+    {        
     }
     
 }
