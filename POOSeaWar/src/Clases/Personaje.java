@@ -12,8 +12,9 @@ import javax.swing.JLabel;
 public class Personaje {
     public String nombre; 
     public String imagen; 
-    public int resistencia, sanidad, fuerza, porcentaje; 
     public ArrayList<JLabel> fichas = new ArrayList<>();
+    ArrayList<Poder> poderes = new ArrayList<>();
+    ArrayList<Casilla> casillas = new ArrayList();
     
     public void verificarVivo(){
         String msm = "";
@@ -37,10 +38,6 @@ public class Personaje {
         this.nombre = nombre;
         this.imagen = imagen;
     }
-
-    
-  
-    
     public int getSanidad()
     {
         return this.sanidad;
@@ -55,6 +52,11 @@ public class Personaje {
     public void addCasilla(Casilla casilla)
     {
         casillas.add(casilla);
+    }
+    
+    public void addPoder(Poder poder)
+    {
+        poderes.add(poder);
     }
     
     }

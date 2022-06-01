@@ -11,14 +11,15 @@ import java.io.Serializable;
  * @author ANTONY
  */
 public abstract class BaseComandos implements iCommand, Serializable{
+    private String nombreComando;
     private String[] args;
     private boolean isBroadcast;
-    private String nombreComando;
+    
     
     public BaseComandos(String nombreComando, String[] args, boolean isBroadcast) {
         this.args = args;
-        this.isBroadcast = isBroadcast;
         this.nombreComando = nombreComando;
+        this.isBroadcast = isBroadcast;
     }
     public String[] getArgs() {
         return args;
@@ -28,15 +29,16 @@ public abstract class BaseComandos implements iCommand, Serializable{
         this.args = args;
     }
 
+    @Override
     public String getCommandName(){
         return this.nombreComando;
     }
     
-    public boolean isBroadcast(){
-        return isBroadcast;
+    public boolean isBroadcast()
+    {
+        return this.isBroadcast;
     }
     
-    
-    public abstract String executeOnServer();
-    public abstract String executeOnClient();
+    public abstract void executeOnServer();
+    public abstract void executeOnClient();
 }

@@ -8,11 +8,10 @@ package Clases;
  *
  * @author moig1
  */
-public enum EnumDireccion {
-    ARRIBA,
-    ABAJO,
-    IZQUIERDA,
-    DERECHA
+public enum EnumPermanece {
+    NO,
+    VOLCAN,
+    REMOLINO,
+    RADIOACTIVO
+    
 }
-
-

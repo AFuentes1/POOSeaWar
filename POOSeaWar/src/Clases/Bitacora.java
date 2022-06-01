@@ -1,6 +1,8 @@
 
 package Clases;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ANTONY
@@ -21,25 +23,6 @@ public class Bitacora {
         this.resultado = resultado; 
     }
 
-    public String getRey() {
-        return rey;
-    }
-
-    public String getGuerrero() {
-        return guerrero;
-    }
-
-    public String getAtaque() {
-        return ataque;
-    }
-
-    public String getReyAtacado() {
-        return reyAtacado;
-    }
-
-    public String getResultado() {
-        return resultado;
-    }
     public String getBitacora()
     {
         return rey+" atacó a "+ reyAtacado + " usando a " + guerrero +" con " + poder +": "+ resultado;
