@@ -101,9 +101,6 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="imagen_lbl1" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                          <Component id="imagen_lbl4" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="imagen_lbl5" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="imagen_lbl6" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="imagen_lbl7" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
@@ -121,40 +118,12 @@
                       <Component id="imagen_lbl7" min="-2" pref="250" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="imagen_lbl6" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="imagen_lbl1" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="286" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="imagen_lbl4" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="32" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="imagen_lbl1">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/thulu.png"/>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[1977, 1483]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="imagen_lbl4">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/hidra.png"/>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[1977, 1483]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
-            </Component>
             <Component class="javax.swing.JLabel" name="imagen_lbl5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">

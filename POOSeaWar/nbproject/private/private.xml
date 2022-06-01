@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/Clases/Rey.java</file>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/Clases/Personaje.java</file>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/Comandos/ComandoAtaque.java</file>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/Comandos/BaseComandos.java</file>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/Clases/Casilla.java</file>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/SeaWarCliente/gui/BoardCliente.java</file>
-            <file>file:/C:/Users/moig1/OneDrive/Documents/NetBeansProjects/POOSeaWar/POOSeaWar/POOSeaWar/src/Clases/Ataque.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/SeaWarCliente/gui/Cliente.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Clases/Bitacora.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Ataques/Ataques.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Personaje/Personaje.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Ataques/FishTelephaty.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/SeaWarCliente/gui/BoardCliente.java</file>
+            <file>file:/C:/Users/ANTONY/Desktop/POOSeaWar/POOSeaWar/src/Clases/Ataque.java</file>
         </group>
     </open-files>
 </project-private>

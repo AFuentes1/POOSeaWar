@@ -190,9 +190,6 @@ public class BoardCliente extends javax.swing.JFrame {
         lblNombreJugador = new javax.swing.JLabel();
         LbPanelCuadricula = new javax.swing.JPanel();
         PanellInfJugadores = new javax.swing.JPanel();
-        imagen_lbl1 = new javax.swing.JLabel();
-        imagen_lbl4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         imagen_lbl5 = new javax.swing.JLabel();
         imagen_lbl6 = new javax.swing.JLabel();
         imagen_lbl7 = new javax.swing.JLabel();
@@ -291,12 +288,6 @@ public class BoardCliente extends javax.swing.JFrame {
 
         PanelPrincipal.add(LbPanelCuadricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 790, 700));
 
-        imagen_lbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/thulu.png"))); // NOI18N
-        imagen_lbl1.setMaximumSize(new java.awt.Dimension(1977, 1483));
-
-        imagen_lbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hidra.png"))); // NOI18N
-        imagen_lbl4.setMaximumSize(new java.awt.Dimension(1977, 1483));
-
         imagen_lbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/thulu.png"))); // NOI18N
         imagen_lbl5.setMaximumSize(new java.awt.Dimension(1977, 1483));
 
@@ -313,9 +304,6 @@ public class BoardCliente extends javax.swing.JFrame {
             .addGroup(PanellInfJugadoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanellInfJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagen_lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen_lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(imagen_lbl5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(imagen_lbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(imagen_lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -330,13 +318,7 @@ public class BoardCliente extends javax.swing.JFrame {
                 .addComponent(imagen_lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(imagen_lbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(imagen_lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(286, 286, 286)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(imagen_lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         PanelPrincipal.add(PanellInfJugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 30, 540, 830));
@@ -693,8 +675,11 @@ public class BoardCliente extends javax.swing.JFrame {
                 case "CRPE":
                     addMensaje(cliente.crearPersonajes(separado));
                     break;
+                default:
+                    addMensaje("Error, el comando ingresado es inexistente");
+                    break;             
+                }
 
-        }
             EntradaComandos.setText(""); 
        }
     
@@ -779,13 +764,10 @@ public class BoardCliente extends javax.swing.JFrame {
     private javax.swing.JScrollPane Resultados;
     private javax.swing.JTextArea TextAreaComandos;
     private javax.swing.JTextArea TxtBitacora;
-    private javax.swing.JLabel imagen_lbl1;
-    private javax.swing.JLabel imagen_lbl4;
     private javax.swing.JLabel imagen_lbl5;
     private javax.swing.JLabel imagen_lbl6;
     private javax.swing.JLabel imagen_lbl7;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel602;
     private javax.swing.JLabel jLabel603;
     private javax.swing.JLabel jLabel604;
