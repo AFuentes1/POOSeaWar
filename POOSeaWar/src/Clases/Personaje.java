@@ -12,24 +12,20 @@ public class Personaje {
     public String nombre; 
     public String imagen; 
     public int resistencia, sanidad, fuerza, porcentaje;  
-    ArrayList<Ataque> Ataques = new ArrayList<Ataque>();
+    ArrayList<Poder> Poder = new ArrayList<>();
+    ArrayList<Casilla> casillas = new ArrayList();
     
     public String getNombre() {
         return nombre;
     }
 
-    public Personaje(String nombre) {
+    public Personaje(String nombre, String imagen) {
         this.nombre = nombre;
+        this.imagen = imagen;
     }
 
     
-    public ArrayList<Ataque> getAtaques() {
-        return Ataques;
-    }
-
-    public void setAtaques(ArrayList<Ataque> Ataques) {
-        this.Ataques = Ataques;
-    }
+  
     
     public int getSanidad()
     {
@@ -41,7 +37,10 @@ public class Personaje {
         return this.resistencia;
     }
     
-    
+    public void addCasilla(Casilla casilla)
+    {
+        casillas.add(casilla);
+    }
     
     }
     

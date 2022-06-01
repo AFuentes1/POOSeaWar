@@ -8,6 +8,22 @@ package Comandos;
  *
  * @author Kelly
  */
-public class ComandoAtaque {
+public class ComandoAtaque extends BaseComandos {
+    
+    
+    public ComandoAtaque(String nombreComando, String[] args)            
+    {
+        super(nombreComando,args,false);
+    }
+    @Override
+    public  String executeOnServer()
+    {
+        
+    }
+    @Override
+    public  String executeOnClient()
+    {
+        
+    }
     
 }
