@@ -33,18 +33,13 @@ public class Personaje {
         return nombre;
     }
 
-    public Personaje(String nombre) {
+    public Personaje(String nombre, String imagen) {
         this.nombre = nombre;
+        this.imagen = imagen;
     }
 
     
-    public ArrayList<Ataque> getAtaques() {
-        return Ataques;
-    }
-
-    public void setAtaques(ArrayList<Ataque> Ataques) {
-        this.Ataques = Ataques;
-    }
+  
     
     public int getSanidad()
     {
@@ -57,7 +52,10 @@ public class Personaje {
     }
 
     
-    
+    public void addCasilla(Casilla casilla)
+    {
+        casillas.add(casilla);
+    }
     
     }
     
