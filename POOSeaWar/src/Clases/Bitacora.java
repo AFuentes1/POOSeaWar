@@ -1,6 +1,8 @@
 
 package Clases;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ANTONY
@@ -12,6 +14,7 @@ public class Bitacora {
     private String reyAtacado;
     private String resultado; 
     private ArrayList<String> detalle;
+    private String ataque;
 
     public Bitacora(String rey, String guerrero, String poder, String reyAtacado, String resultado) {
         this.rey = rey;
@@ -30,6 +33,7 @@ public class Bitacora {
     }
 
     public String getAtaque() {
+        
         return ataque;
     }
 

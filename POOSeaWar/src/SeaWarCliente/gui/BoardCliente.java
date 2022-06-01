@@ -4,6 +4,7 @@
  */
 package SeaWarCliente.gui;
 
+import Personaje.Personaje;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -30,12 +31,12 @@ import javax.swing.plaf.IconUIResource;
  */
 public class BoardCliente extends javax.swing.JFrame {
     
-    private Cliente cliente;
+    public Cliente cliente;
     private ArrayList<JLabel> labels = new ArrayList();
     public JLabel[][] labelMatrix = new JLabel[20][30];
     public boolean vivo = true;
     private String nombreJugador = "";
-    
+ 
     private Clases.Rey miPersonaje;
     /**
      * Creates new form BoardCliente
@@ -79,6 +80,84 @@ public class BoardCliente extends javax.swing.JFrame {
         TextAreaComandos.append(msj + "\n");
     }  
     
+    private void acomodarLabelsPersonajes(){
+//        for(int i = 0;i < 3;i++){
+//            Personaje perso = cliente.personajes.get(i);
+//            if(i == 0){
+//                darImagen(imagen_lbl1, perso.imagen);
+//                nombre_lbl1.setText(perso.getNombre());
+//                poder_lbl1.setText(perso.getAtaque().getNombre());
+//                porcentaje_lbl1.setText((perso.getPorcentaje()*100)+"");
+//                num_poder1.setText(perso.getPoder()+"");
+//                resis_num1.setText(perso.getResistencia()+"");
+//                sanidad_num1.setText(perso.getSanidad()+"");
+//                lbl_vida1.setText(perso.getNombre());
+//                porcentajePerso1.setText((perso.getPorcentaje()*100)+" %");
+//                casillas1.setText((600*perso.getPorcentaje())+" de "+(600*perso.getPorcentaje())+" casillas ");
+//            }
+//            else if(i == 1){
+//                darImagen(imagen_lbl2, perso.imagen);
+//                nombre_lbl2.setText(perso.getNombre());
+//                poder_lbl2.setText(perso.getAtaque().getNombre());
+//                porcentaje_lbl2.setText((perso.getPorcentaje()*100)+"");
+//                num_poder2.setText(perso.getPoder()+"");
+//                resis_num2.setText(perso.getResistencia()+"");
+//                sanidad_num2.setText(perso.getSanidad()+"");
+//                lbl_vida2.setText(perso.getNombre());
+//                porcentajePerso2.setText((perso.getPorcentaje()*100)+" %");
+//                casillas2.setText((600*perso.getPorcentaje())+" de "+(600*perso.getPorcentaje())+" casillas ");
+//            }
+//            else if(i == 2){
+//                darImagen(imagen_lbl3, perso.imagen);
+//                nombre_lbl3.setText(perso.getNombre());
+//                poder_lbl3.setText(perso.getAtaque().getNombre());
+//                porcentaje_lbl3.setText((perso.getPorcentaje()*100)+"");
+//                num_poder3.setText(perso.getPoder()+"");
+//                resis_num3.setText(perso.getResistencia()+"");
+//                sanidad_num3.setText(perso.getSanidad()+"");
+//                lbl_vida3.setText(perso.getNombre());
+//                porcentajePerso3.setText((perso.getPorcentaje()*100)+" %");
+//                casillas3.setText((600*perso.getPorcentaje())+" de "+(600*perso.getPorcentaje())+" casillas ");
+//            }
+//            
+//            
+//            
+//        }
+    }
+    
+    
+    public void crearPantalla(){
+        ArrayList<Icon> iconos = new ArrayList<>();
+        iconos.add(new ImageIcon(getClass().getResource("/Imagenes/azul.png")));
+        iconos.add(new ImageIcon(getClass().getResource("/Imagenes/gris.png")));
+        iconos.add(new ImageIcon(getClass().getResource("/Imagenes/anaranjado.png")));
+        int cont = 0;
+        
+        int pos;
+        int nCartas = 600;
+        Stack < Integer > pCartas = new Stack < Integer > ();
+        for (int i = 0; i < nCartas ; i++) {
+          pos = (int) Math.floor(Math.random() * nCartas );
+          while (pCartas.contains(pos)) {
+            pos = (int) Math.floor(Math.random() * nCartas );
+          }
+          pCartas.push(pos);
+        }
+        
+        for(int i=0; i < cliente.personajes.size(); i++) {
+            Personaje personaje = cliente.personajes.get(i);
+            double cantidad = 600*personaje.getPorcentaje();
+            for(int j = 0; j < cantidad;j++){
+                labels.get(pCartas.get(cont)).setIcon(iconos.get(i));
+                labels.get(pCartas.get(cont)).setText("100");
+                cliente.personajes.get(i).agregarFichas(labels.get(j));
+                cliente.fichas.add(cliente.personajes.get(i).fichas.get(j));
+                cont++;
+             }
+        }
+        acomodarLabelsPersonajes();
+    }
+    
     private void agregarLbl(){
         int y = 0;
         JLabel [][] labelMatrix = new JLabel[20][30];
@@ -111,8 +190,12 @@ public class BoardCliente extends javax.swing.JFrame {
         lblNombreJugador = new javax.swing.JLabel();
         LbPanelCuadricula = new javax.swing.JPanel();
         PanellInfJugadores = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        imagen_lbl1 = new javax.swing.JLabel();
+        imagen_lbl4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        imagen_lbl5 = new javax.swing.JLabel();
+        imagen_lbl6 = new javax.swing.JLabel();
+        imagen_lbl7 = new javax.swing.JLabel();
         PanelInfCasilla = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
@@ -208,21 +291,52 @@ public class BoardCliente extends javax.swing.JFrame {
 
         PanelPrincipal.add(LbPanelCuadricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 790, 700));
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane4.setViewportView(jTextArea4);
+        imagen_lbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/thulu.png"))); // NOI18N
+        imagen_lbl1.setMaximumSize(new java.awt.Dimension(1977, 1483));
+
+        imagen_lbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hidra.png"))); // NOI18N
+        imagen_lbl4.setMaximumSize(new java.awt.Dimension(1977, 1483));
+
+        imagen_lbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/thulu.png"))); // NOI18N
+        imagen_lbl5.setMaximumSize(new java.awt.Dimension(1977, 1483));
+
+        imagen_lbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aquaman.png"))); // NOI18N
+        imagen_lbl6.setMaximumSize(new java.awt.Dimension(1977, 1483));
+
+        imagen_lbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hidra.png"))); // NOI18N
+        imagen_lbl7.setMaximumSize(new java.awt.Dimension(1977, 1483));
 
         javax.swing.GroupLayout PanellInfJugadoresLayout = new javax.swing.GroupLayout(PanellInfJugadores);
         PanellInfJugadores.setLayout(PanellInfJugadoresLayout);
         PanellInfJugadoresLayout.setHorizontalGroup(
             PanellInfJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanellInfJugadoresLayout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(PanellInfJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(imagen_lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imagen_lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imagen_lbl5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imagen_lbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imagen_lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         PanellInfJugadoresLayout.setVerticalGroup(
             PanellInfJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 830, Short.MAX_VALUE)
+            .addGroup(PanellInfJugadoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imagen_lbl5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(imagen_lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(imagen_lbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(imagen_lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(286, 286, 286)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imagen_lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         PanelPrincipal.add(PanellInfJugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 30, 540, 830));
@@ -532,7 +646,7 @@ public class BoardCliente extends javax.swing.JFrame {
 
         PanelPrincipal.add(Filas, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 20, 700));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ANTONY\\Desktop\\POOSeaWar\\POOSeaWar\\recursos\\Fondo.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo.jpg"))); // NOI18N
         PanelPrincipal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -574,12 +688,14 @@ public class BoardCliente extends javax.swing.JFrame {
                     }
                     else{
                         addMensaje("El comando no esta ingresado correctamente.");
-                }
-                EntradaComandos.setText(""); 
-                
-                    
-    
+         
+                    }break; 
+                case "CRPE":
+                    addMensaje(cliente.crearPersonajes(separado));
+                    break;
+
         }
+            EntradaComandos.setText(""); 
        }
     
 
@@ -663,7 +779,13 @@ public class BoardCliente extends javax.swing.JFrame {
     private javax.swing.JScrollPane Resultados;
     private javax.swing.JTextArea TextAreaComandos;
     private javax.swing.JTextArea TxtBitacora;
+    private javax.swing.JLabel imagen_lbl1;
+    private javax.swing.JLabel imagen_lbl4;
+    private javax.swing.JLabel imagen_lbl5;
+    private javax.swing.JLabel imagen_lbl6;
+    private javax.swing.JLabel imagen_lbl7;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel602;
     private javax.swing.JLabel jLabel603;
     private javax.swing.JLabel jLabel604;
@@ -716,9 +838,7 @@ public class BoardCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel652;
     private javax.swing.JLabel jLabel653;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JLabel lblNombreJugador;
     private javax.swing.JTextArea txtResultados;
