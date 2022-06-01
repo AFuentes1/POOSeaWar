@@ -3,6 +3,7 @@ package Clases;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import javax.swing.JLabel;
 
 /**
  *
@@ -11,8 +12,22 @@ import java.util.ArrayList;
 public class Personaje {
     public String nombre; 
     public String imagen; 
-    public int resistencia, sanidad, fuerza, porcentaje;  
+    public int resistencia, sanidad, fuerza, porcentaje; 
+    public ArrayList<JLabel> fichas = new ArrayList<>();
+    
+    public void verificarVivo(){
+        String msm = "";
+        for(int i = 0;i <fichas.size();i++){  
+            msm = fichas.get(i).getText();
+            if("0".equals(msm) == false){ 
+                return;
+            }
+        }
+        this.vivo = false;
+    }
+   
     ArrayList<Ataque> Ataques = new ArrayList<Ataque>();
+    public boolean vivo = true; 
     
     public String getNombre() {
         return nombre;
@@ -40,6 +55,7 @@ public class Personaje {
     {
         return this.resistencia;
     }
+
     
     
     
